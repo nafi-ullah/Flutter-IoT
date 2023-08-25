@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "384147209607",
+    "project_id": "lightapp-e11f3",
+    "storage_bucket": "lightapp-e11f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384147209607:android:7d99a1dc662c47f8a7e722",
+        "android_client_info": {
+          "package_name": "com.example.pera_on"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384147209607-avklbv7r9lt8lkudc98qcnhfdi4sejl8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCETcOmu-zJq1Gv2GST75hjP4cSNeHwEZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "384147209607-avklbv7r9lt8lkudc98qcnhfdi4sejl8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
