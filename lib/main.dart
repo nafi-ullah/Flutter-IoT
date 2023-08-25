@@ -3,7 +3,7 @@ import 'package:pera_on/home_screen.dart';
 import 'package:pera_on/splash_screen.dart';
 import 'package:pera_on/test_patch.dart';
 import 'package:firebase_core/firebase_core.dart';
-
+import 'package:battery_plus/battery_plus.dart';
 import 'firebase_options.dart';
 
 void main() async{

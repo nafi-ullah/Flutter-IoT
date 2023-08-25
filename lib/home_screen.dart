@@ -1,9 +1,13 @@
+import 'dart:async';
+
+import 'package:battery_plus/battery_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'dart:async';
-import 'package:battery/battery.dart';
+
+import 'package:pera_on/battery.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -17,26 +21,25 @@ class _HomeScreenState extends State<HomeScreen> {
   var buttonColorCharger = Colors.red;
   String lightText = "Nafi's Pain is Off";
   String chargerText = "Charger is Off";
-  var lightOn = "0";
-  var chargerOn = "0";
+  var lightOn ;
+  var chargerOn ;
   //final docUser;
-  
+  //-------------Adding battery percentage------------------------------
+  var battery = Battery();
+  int level = 100;
+  BatteryState batteryState = BatteryState.full;
+  late Timer timer;
+  late StreamSubscription streamSubscription;
+
+
+
+
 
   void lightFunction(){
     final url = Uri.https(
         'lightapp-e11f3-default-rtdb.asia-southeast1.firebasedatabase.app','light.json');
     setState(() {
       if(lightOn == "0"){
-        //------------- update data in cloud firestore-----------------------
-        // final docUser1 = FirebaseFirestore.instance
-        //     .collection('perabase/peraid/onoff')
-        //     .doc('WYEnqu34bu6SBKEMATpu');
-
-        // docUser1.update({
-        //   'light': lightOn,
-        // });
-        // final response = await http.put(url, body: request);
-        //------------------------------------------------------------------
 
         lightOn = "1";
         http.put(
@@ -126,10 +129,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
 
+
+
+
   @override
   Widget build(BuildContext context) {
-
-
 
 
 
@@ -189,21 +193,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               SizedBox(
                 width: 200,
-                child: ElevatedButton(onPressed: chargerFunction,
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: buttonColorCharger, //background color of button
-                        side: const BorderSide(width:3, color:Colors.brown), //border width and color
-                        elevation: 3, //elevation of button
-                        shape: RoundedRectangleBorder( //to set border radius to button
-                            borderRadius: BorderRadius.circular(30)
-                        ),
-                        padding: EdgeInsets.all(20) //content padding inside button
-                    ),
-                    child: Text(chargerText,
-                        style: TextStyle(color: Colors.white)
-                    )
+                child: BatteryCheck(chargerText, buttonColorCharger, chargerFunction),
 
-                ),
               )
             ],
           ),
