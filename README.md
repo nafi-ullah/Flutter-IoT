@@ -23,8 +23,8 @@ This GitHub repository contains the source code for an Internet of Things (IoT) 
 ## Demo
 
 ### Remote Light Control
-![Remote Light Control](assets/images/lighton.gif)
+![Remote Light Control](assets/images/lighton.gif){ width=600 }
 
 ### Phone Charger Management
-![Phone Charger Management](assets/images/chargeron.gif)
+![Phone Charger Management](assets/images/chargeron.gif){ width=300 }
 
