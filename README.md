@@ -23,11 +23,11 @@ This GitHub repository contains the source code for an Internet of Things (IoT) 
 ## Demo
 
 ### Remote Light Control
-<i>Wait a while to load the gif file</i>
+<i>Wait a while to load the gif file</i><br>
 ![Remote Light Control](assets/images/lighton.gif)
 
 ### Phone Charger Management
-<i> Wait a while to load the gif file</i>
+<i> Wait a while to load the gif file</i><br>
 <img src="assets/images/chargeron.gif" alt="Image Description" width="200" >
 
 
